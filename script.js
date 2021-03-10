@@ -61,7 +61,7 @@ function iniciarJogo() {
 
     criarBG();
     criarCobrinha();
-    drawFood()
+    drawFood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -88,6 +88,14 @@ function iniciarJogo() {
 
 }
 
+function velocidade(idVal) {
+    clearInterval(jogo);
+    if(idVal == "lento") jogo = setInterval(iniciarJogo, 150);
+    if(idVal == "normal") jogo = setInterval(iniciarJogo, 100);
+    if(idVal == "rapido") jogo = setInterval(iniciarJogo, 50);
+}
+
 let jogo = setInterval(iniciarJogo, 100);
+
 
 

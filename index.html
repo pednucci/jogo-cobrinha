@@ -9,7 +9,17 @@
     <title>Jogo-Cobrinha</title>
 </head>
 <body>
-    <h1>Jogo da Cobrinha!</h1>
-    <canvas id="snake" width="512" height="512"></canvas>
+    <div class="container">
+        <div class="velocidade">
+            <h3>Velocidade:</h3>
+            <button class="speedBt" id="lento" onclick="velocidade(this.id)">Lento</button>
+            <button class="speedBt" id="normal" onclick="velocidade(this.id)">Normal</button>
+            <button class="speedBt" id="rapido" onclick="velocidade(this.id)">Rápido</button>
+        </div>
+        <div class="canva">
+            <h1>Jogo da Cobrinha!</h1>
+            <canvas id="snake" width="512" height="512"></canvas>
+        </div>
+    </div>
 </body>
 </html>
