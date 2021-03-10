@@ -78,7 +78,6 @@ function iniciarJogo() {
     }
     else{
         score.innerHTML = counter++;
-        console.log(counter)
         food.x = Math.floor(Math.random() * 15 + 1) * box,
         food.y = Math.floor(Math.random() * 15 + 1) * box;
     }
