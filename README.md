@@ -6,3 +6,7 @@ Projeto realizado na plataforma _Digital Innovation One_ !
 
 
 
+Funcionalidades adicionadas a mais:
+
+- Sistema de escolha de velocidade;
+- Sistema de pontuação.
