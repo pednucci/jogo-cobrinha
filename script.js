@@ -1,7 +1,9 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
+let counter = 1;
 let snake = [];
+let score = document.getElementById("points");
 snake[0] = {
     x: 8 * box,
     y: 8 * box
@@ -75,8 +77,10 @@ function iniciarJogo() {
         snake.pop();
     }
     else{
+        score.innerHTML = counter++;
+        console.log(counter)
         food.x = Math.floor(Math.random() * 15 + 1) * box,
-        food.y = Math.floor(Math.random() * 15 + 1) * box
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
     }
 
     let newHead = {
