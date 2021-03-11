@@ -28,7 +28,7 @@ function criarCobrinha() {
 
 function drawFood() {
     context.fillStyle = "red";
-    context.fillRect(food.x, food.y, box, box) 
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -47,7 +47,6 @@ function update (event) {
 }
 
 function iniciarJogo() {
-
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 * box && direction == "left") snake[0].x = 16 * box;
     if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
@@ -58,6 +57,11 @@ function iniciarJogo() {
             clearInterval(jogo);
             alert('Game Over!');
             location.reload();
+        }
+        if(snake[i].x == food.x && snake[i].y == food.y)
+        {
+            food.x = Math.floor(Math.random() * 15 + 1) * box;
+            food.y = Math.floor(Math.random() * 15 + 1) * box;
         }
     }
 
@@ -99,6 +103,3 @@ function velocidade(idVal) {
 }
 
 let jogo = setInterval(iniciarJogo, 100);
-
-
-
